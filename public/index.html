@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html data-ng-app="app" lang="en">
+<head>
+    <title>ACI Convention Group Leader Board</title>
+    <link href="./css/app.css" rel="stylesheet">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+
+</head>
+<body data-ng-controller="MainCtrl" role="application" class="test-surface">
+    <div class="ldrbd-widget" role="widget" data-ng-cloak>
+        <header role="heading">
+            <h1 class="widget-title">ACI Convention Team Leaderboard</h1>
+        </header>
+        <div class="ldr-list-wrapper" role="structure">
+            <div class="ldr-list table table-hover" role="grid">
+
+                <div class="thead" role="rowheader">
+                    <div class="tr" role="row">
+                        <div class="th name"><div class="clip-text">Team</div></div>
+                        <div class="th score"><div class="clip-text">Kits</div></div>
+                    </div>
+                </div>
+
+                <div class="tbody" role="rowgroup">
+                    <div class="tr" data-ng-repeat="contestant in contestants | orderBy:'-score'" data-contestant="contestant" role="row" ng-cloak>
+                        <div class="td rank" role="gridcell">
+                          <!-- <div ng-repeat="n in range(5,15)">Number {{n}}></div> -->
+                        </div>
+                        <div class="td name" role="gridcell" title="{{contestant.display_name}}">
+                            <div class="clip-text">{{contestant.display_name}}</div>
+                        </div>
+                        <div class="td score" role="gridcell" title="{{contestant.score}}"><div class="clip-text">{{contestant.score}}</div></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer role="status">
+                &copy; Brian M Asquith of Ellis Tech, LLC 2018
+            </footer>
+
+        </div>
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.3/angular.min.js"></script>
+    <script src="./js/leader-board.js"></script>
+</body>
+</html>

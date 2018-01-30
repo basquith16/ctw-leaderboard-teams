@@ -1,0 +1,29 @@
+{
+  "name": "ctwleaderteams",
+  "description": "AngularJS Leader Board",
+  "version": "0.0.1-2",
+  "private": false,
+  "dependencies": {
+    "express": "4.16.2",
+    "socket.io": "2.0.4"
+  },
+  "subdomain": "simpulton.angularjs-leader-board",
+  "scripts": {
+    "start": "app.js"
+  },
+  "engines": {
+    "node": "7.0.0"
+  },
+  "main": "app.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/basquith16/ctw-leaderboard-teams.git"
+  },
+  "author": "Brian M Asquith",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/basquith16/ctw-leaderboard-teams/issues"
+  },
+  "homepage": "https://github.com/basquith16/ctw-leaderboard-teams#readme"
+}
